@@ -47,8 +47,8 @@
                     <br>
                     <p><b>Me contacter : </b> prose.poeme.luc.filopon@gmail.com</p>
                     <br>
-                    <p><b>Ou cliquez ici : </b><a class="btn"
-                            href="mailto:prose.poeme.luc.filopon@gmail.com">M'envoyer un mail</a>
+                    <p><b>Ou cliquez ici : </b><a class="btn" href="mailto:prose.poeme.luc.filopon@gmail.com">M'envoyer
+                            un mail</a>
                     </p>
                 </div>
                 <div class="hero-image">
@@ -110,9 +110,9 @@
                             résilience.
                         </p>
                         <br>
-                        
+
                     </div>
-                
+
                     <img src="Talent.png" alt="Talent" class="author-img">
                 </div>
             </div>
@@ -124,6 +124,23 @@
             <p>&copy; 2025 Filopon Luc. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const talentImg = document.querySelector(".author-img");
+
+        talentImg.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    </script>
 
 </body>
 
